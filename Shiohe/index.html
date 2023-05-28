@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<!-- Head tag contain metadata. Metadata is data about the HTML document  -->
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Title is the name displayed on the tab -->
+    <title>Cashoe</title>
+<!-- link this html document with style.css file     -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<!-- For fonts use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+
+<body onLoad="preLoad()">
+    <header>
+<!--           CASHOE logo text -->
+        <div class='logo'>
+            <h1>CASHOE</h1>
+<!--             CASHOE logo image  -->
+            <img src="images/Logo.png">
+        </div>
+<!--           header navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+<!--               Shop will take user to form.html page -->
+                <li><a href="form.html">Shop</a></li>
+                <li><a href="#">New Arrivals</a></li>
+<!--               Header navbar cart icon -->
+                <li><a href="#"><img src="images/Cart.png" id="cart-icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--     Main content of webpage -->
+    <main>
+<!--         conatiner for sliding shoes -->
+        <div class="container">
+            <div class="tag">
+<!--                 Text behind sliding shoes -->
+                <h1>CASHOE</h1>
+            </div>
+<!--              -->
+            <div class="slider-wrapper">
+                <div class="slider">
+<!--                     Sliding Shoes Images -->
+                    <div class="slide" id="image1">
+                        <img src="images/Black red shoe.png">
+                    </div>
+                    <div class="slide" id="image2">
+                        <img src="images/Black white red shoe.png">
+                    </div>
+                    <div class="slide" id="image3">
+                        <img src="images/Blue grey Shoe.png">
+                    </div>
+                    <div class="slide" id="image4">
+                        <img src="images/Blue red Shoe.png">
+                    </div>
+                    <div class="slide" id="image1">
+                        <img src="images/Black red shoe.png">
+                    </div>
+                </div>
+<!--                 Smaller shoes below sliding shoes-->
+                <div class="slider-nav">
+    <!--                 This div for hovering over small shoes -->
+                    <div></div>
+                    <a href="#image1"><img src="images/Black red shoe.png"></a>
+                    <a href="#image2"><img src="images/Black white red shoe.png"></a>
+                    <a href="#image3"><img src="images/Blue grey Shoe.png"></a>
+                    <a href="#image4"><img src="images/Blue red Shoe.png"></a>
+                </div>
+            </div>
+        </div>
+<!--         About Section  -->
+        <div class="about">
+<!--        Three floating boxes -->
+            <div class="float-box"></div>
+            <div class="float-box"></div>
+            <div class="float-box"></div>
+<!--        About Us Text -->
+            <section class="about-text">
+                <h2>About Us</h2>
+                <p>Cashoe is a shoe purchasing website. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                consequuntur asperiores repellendus, id nam harum odio fugit ullam quo repellat! Aut, numquam nobis ea nisi
+                minus neque doloremque debitis totam.</p>
+            </section>
+<!--        Floating shoes beside about us text -->
+            <section>
+                <img src="images/Blue yellow shoe.png">
+            </section>
+        </div>
+<!--    Three shoe cards      -->
+        <div class="shoe-cards">
+<!--             Card -->
+            <div class="card">
+<!--                 Shoe image -->
+                <img src="images/blue tilt shoe.png">
+<!--                 Some description about shoe -->
+                <h2>Shoe 1</h2>
+                <p>Blue colured/ Deep grey fabric/ Cool futuristic look<br> 30</p>
+            </div>
+            <div class="card">
+<!--                 Shoe image -->
+                <img src="images/Blue wings shoe.png">
+<!--                 Some description about shoe -->
+                <h2>Shoe 2</h2>
+                <p>Blue colured/ Wings/ Cool futuristic look</p>
+            </div>
+            <div class="card">
+<!--                 Shoe image -->
+                <img src="images/Magenta shoe.png">
+<!--                 Some description about shoe -->
+                <h2>Shoe 3</h2>
+                <p>Blue colured/ Deep grey fabric/ Cool futuristic look</p>
+            </div>
+        </div>
+    </main>
+    <hr>
+<!--     Footer  -->
+    <footer>
+<!--         Copyright claim -->
+        <p>Copyright © <span>2019</span> CASHOE Pvt. Ltd. All Rights Reserved.</p>
+<!--         navbar for some links -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="form.html">Shop</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="chart.html">Size Chart</a></li>
+            </ul>
+        </nav>
+<!--         Contact Us details -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" class="contact">Contact Us</a></li>
+                <li><a href="#">brarlily<span>25</span>@gmail.com</a></li>
+                <li><a href="#">Lily Brar</a></li>
+                <li><a href="#">thomasbrian<span>82</span>@gmail.com</a></li>
+                <li><a href="#">Thomas Lee</a></li>
+            </ul>
+        </nav>
+        <nav class="iconbar">
+<!--             Social Media Links -->
+            <ul>
+                <li><a href="https://facebook.com" target="_blank"><img src="icons/facebook.png"></a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="icons/instagram.png"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png"></a></li>
+                <li><a href="https://twitter.com" target="_blank"><img src="icons/twitter.png"></a></li>
+            </ul>
+        </nav>  
+      </footer>
+    
+      <script src="script.js"></script>
+    
+      <!--
+      This script places a badge on your repl's full-browser view back to your repl's cover
+      page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+      teal, blue, blurple, magenta, pink!
+      -->
+      <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+    

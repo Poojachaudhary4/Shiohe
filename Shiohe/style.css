@@ -1,0 +1,502 @@
+html {
+    font-family: sans-serif;
+}
+
+body{
+    font-family:'Roboto Slab', sans-serif;
+    font-size:1vw;
+/*     Font color white */
+    color:white;
+/*     background of body */
+    background: linear-gradient(201deg, rgb(247 14 123) , rgb(13 234 199));
+}
+/* header styling */
+header{
+/*     Position is sticky so that it remain on its origianal position while scrolling also */
+    position:sticky;
+    top:1em;
+/*     header elements flex */
+    display:flex;
+    justify-content:space-between;
+/*     z-index is greater that 1 so that is display over other elements */
+    z-index:100;
+    padding:0 2em;
+    align-items:center;
+/*     Header background  */
+    background:#ffffff14;
+    border-radius:0.4em;
+/*     filter blur */
+    backdrop-filter:blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px 0 solid rgba(255,255,255,0.5);
+}
+/* Image logo */
+header .logo img{
+    width:10vw;
+  
+}
+/* logo text */
+header .logo h1{
+    position:absolute;
+    font-size:1em;
+    color:white;
+    transform:rotate(-25deg) ;
+    top:0em;
+    left:2.7em;
+/*     User select none so that it cannot be selected */
+    user-select:none;
+}
+/* Navbar elements alignment  */
+header .navbar ul{    
+    display:flex;
+    gap:4em;
+    align-items:center;
+}
+
+header .navbar ul li{
+    list-style-type:none;
+}
+header .navbar ul li a{
+    text-decoration:none;
+    color:white;
+}
+/* Cart icon size */
+#cart-icon{
+    width:2em;    
+}
+/* main styling */
+main{
+    width:100%;
+}
+
+main .container .tag{
+    margin-top:-1em ;
+    text-align:center;
+    font-size:11vw;
+}
+/* container of sliding shoes*/
+main .container{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:42vw;
+}
+/* slider  */
+main .container .slider{
+  position:absolute;
+  top:-5%;
+  left:0;
+  width:500%;
+  height:100%;
+  float:left;
+/* animation to slide left */
+  animation: animate 10s linear infinite;
+} 
+
+main .container .slider .slide{
+  width:20%;
+  height:100%;
+  float:left;
+}
+/* Slider Image size and padding */
+main .container .slider .slide img{
+    padding:0 25%;
+    width:45vw;
+}
+
+main .container .slider-wrapper .slider-nav{
+    display:flex;
+    width:35vw;
+    position:absolute;
+    column-gap:1vw;
+    bottom:1em;
+    left:50%;
+/*  smaller images at center */
+    transform:translateX(-50%);
+    z-index:1;
+}
+main .container .slider-wrapper .slider-nav a{
+    width:35vw;
+    z-index:2;
+    transition:opacity ease 250ms;
+}
+/* size of smaller slider images */
+main .container .slider-wrapper .slider-nav a img{
+    width:6vw;
+}
+/* a floating empty div which slides over smaller images */
+main .container .slider-wrapper .slider-nav div{
+    width:6vw;
+    height:6vw;
+    position:absolute;
+    border-radius:0.5em;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px solid rgb(255 255 255 / 13%);
+/*  animation float right */
+    animation: hov 10s linear infinite;
+}
+
+/*About US css */
+main .about{
+    display:flex;
+    color:white;
+    position:relative;
+    justify-content: space-evenly;
+}
+
+/* About us box properties */
+main .about .float-box{
+    position:absolute;
+    border-radius:0.5em;
+    backdrop-filter:blur(5px);
+/*     background color white with opacity 0.1 */
+    background:rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px inset rgba(255,255,255,0.8);
+    border-top:1px inset rgba(255,255,255,1.8);
+}
+/* Boxes around about us different floating animation*/
+/* Float left right */
+main .about .float-box:nth-child(1){
+    width:10%;
+    height:16%;
+    top:2vw;
+    left:5vw;
+    border:1px solid rgba(255,255,255,0.1);
+    animation:floatlr 5s ease-in-out infinite;
+}
+/* Float top bottom */
+main .about .float-box:nth-child(2){
+    top:2vw;
+    left:41vw;
+    width:7%;
+    height:15%;
+    z-index:2;
+    border:1px solid rgba(255,255,255,0.1);
+    animation:floattb 3s ease-in-out infinite;
+}
+
+/* Float left right */
+main .about .float-box:nth-child(3){
+    top:23vw;
+    left:19vw;
+    width:5%;
+    z-index:2;
+    height:11%;
+    border:1px solid rgba(255,255,255,0.1);
+    animation:floatlr 3s ease-in-out infinite;
+}
+/* About us text */
+main .about .about-text{
+    margin:5em 0 0 2em;
+    padding:2em;
+    width:35vw;
+    text-align:justify;
+    height:150%;
+    line-height:2em;
+    letter-spacing:0.1em;
+    border-radius:0.5em;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px 0 solid rgba(255,255,255,0.5);
+    border-top:1px solid rgba(255,255,255,0.1);
+} 
+main .about h2{
+    font-size:2em;
+}
+
+/* Image beside about us  */
+main .about img{
+  width:33vw;
+  animation:floattb 4s ease infinite;
+}
+
+/* Css of cards below about us  */
+.shoe-cards{
+    display:flex;
+    gap:2vw;
+    justify-content: center;
+}
+/*  */
+.shoe-cards .card{
+    width:25vw;
+    height:30vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-radius:0.5em;
+    backdrop-filter:blur(5px);
+/*  Transparent background    */
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px 0 solid rgba(255,255,255,0.5);
+    border-top:1px solid rgba(255,255,255,0.1);
+    transition: 1s ease-in-out;
+/*  perspective helps in different orientation of every card    */
+    perspective:30vw;
+}
+/* Rotation of first card */
+.shoe-cards .card:nth-child(1){
+  transform:rotateY(31deg);
+}
+/* Second card is above from its original position and 60em behind from z-origin */
+.shoe-cards .card:nth-child(2){
+  transform:translate3d(0em,-2em,60em);
+}
+/* Third card rotated 30deg in y axis */
+.shoe-cards .card:nth-child(3){
+  transform:rotateY(30deg);
+}
+/* Hovering removes any transform on cards */
+.shoe-cards .card:hover{
+  transform:none;
+}
+/* Size of shoe image on cards */
+.shoe-cards .card img{
+    width:20vw;
+  transition:2s ease;
+}
+/* When hovered the shoe will tilt 5deg */
+.shoe-cards .card img:hover{
+/*   width:20vw; */
+  transform:rotate(-5deg);
+}
+.shoe-cards .card p{
+  width:19vw;
+  text-align:justify;
+}
+
+/* Chart Styling */
+
+main .div-table{
+    width:75vw;
+    margin:1% 12% 4% 12%;
+    padding:2% 0;
+    display:flex;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+/* Glassmorphism */
+    background:rgba(255,255,255,0.1);
+    border-radius:0.4em;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px 0 solid rgba(255,255,255,0.5);
+}
+/* Image behind table */
+main .div-table img{
+    position:absolute;
+    top:-15%;
+    width:40vw;
+    opacity:0.5;
+    filter:blur(2px);
+    animation:floattb 4s linear infinite ;    
+}
+/*  */
+main table{
+    width:70vw;
+    text-align:center;
+    border-collapse:collapse;
+    background:rgba(255,255,255,0.1);
+    border-radius:0.4em;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px 0 solid rgba(255,255,255,0.5);
+} 
+/* Table header */
+main table tr th{
+    padding:1em;
+}
+/* Table data */
+main table tr td{
+    padding:0.6em;
+}
+/* Even table row background color different */
+main table tr:nth-child(even){
+    background-color:rgba(255,255,255,0.1);
+}
+
+/* Form Styling */
+.form-container{
+    width:75vw;
+    margin:1% 12% 4% 12%;
+    padding:2% 0%;
+    display:flex;
+    position:relative;
+    
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,0.1);
+    border-radius:0.4em;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1); 
+    border:1px solid rgba(255,255,255,0.5);
+}
+.form-container fieldset{
+  width:50vw;
+  padding:2vw;
+  display:flex;
+  flex-direction:column;
+  border:0.2vw solid #ffffff82;
+  border-radius:0.5em;
+}
+fieldset label{
+    display: inline-block;
+    width: 8vw;
+  margin:0 0.4vw;
+}
+
+
+input{
+    margin:1vw 0;
+    padding:0.8%;
+    width:14vw;
+    color:white;
+    font-size:1vw;
+    font-family:'Roboto Slab',sans-serif;
+    background:rgb(255 255 255 / 8%);
+    border-radius:0.2em;
+    backdrop-filter:blur(5px);
+    border:0.1em solid rgba(255,255,255,0.1);
+}
+input:focus{
+    outline:none;
+}
+
+input::-webkit-calendar-picker-indicator{
+    filter:invert(1);
+}
+
+
+#submit-button{
+    margin:0 8vw;
+}
+
+hr{
+    border:0.1vw solid rgba(255,255,255,0.3);
+}
+
+/* Footer  */
+footer{
+    display:flex;
+    gap:3vw;
+    justify-content:space-evenly;
+}
+/* Footer all navbar flex */
+footer .navbar ul{
+    display:flex;
+    flex-direction: column;
+}
+/* List style type  */
+footer .navbar ul li{
+    list-style-type:none;
+}
+/* Anchor list color and underline  */
+footer .navbar ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Icons flex */
+footer .iconbar ul{
+    display:flex;
+    flex-direction:row;
+    gap:2vw;
+}
+footer .iconbar ul li{
+    list-style-type:none;
+}
+footer .iconbar ul li a{
+    text-decoration:none;
+    color:white;
+}
+/* icons size */
+footer img{
+    width:2vw;
+}
+
+/* Animation for sliding shoes */
+@keyframes animate{
+  0%{
+    left:0;
+  }
+  20%{
+    left:0;
+  }
+  25%{
+    left:-100%;
+  }
+  45%{
+    left:-100%;
+  }
+  50%{
+    left:-200%;
+  }
+  70%{
+    left:-200%;
+  }
+  75%{
+    left:-300%;
+  }
+  95%{
+    left:-300%;
+  }
+  100%{
+    left:-400%;
+  }
+} 
+/* Animation for sliding small shoes */
+@keyframes hov{
+  0%{
+    left:0;
+  }
+  20%{
+    left:0;
+  }
+  25%{
+    left:9vw;
+  }
+  45%{
+    left:9vw;
+  }
+  50%{
+    left:18vw;
+  }
+  70%{
+    left:18vw;
+  }
+  75%{
+    left:27vw;
+  }
+  95%{
+    left:27vw;
+  }
+  100%{
+    left:0;
+  }
+} 
+/* Animation for float left right */
+@keyframes floatlr{
+    
+    0%{
+        transform:translateX(0%);
+    }
+    50%{
+    transform:translateX(8%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+}
+/* Animation for float top bottom */
+@keyframes floattb{
+    0%{
+        transform:translateY(0%);
+    }
+    50%{
+    transform:translateY(8%);
+    }
+    100%{
+        transform:translateY(0%);
+    }   
+}
